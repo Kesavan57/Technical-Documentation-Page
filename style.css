@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: #212529;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #0077b6;
+}
+
+kbd {
+  border-radius: 2px;
+  padding: 2px;
+  border: 1px solid silver;
+}
+
+mark {
+  background-color: silver;
+  color: black;
+  padding: 2px;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+#navbar header {
+  position: fixed;
+  font-size: 25px;
+  font-family: "Poppins";
+  font-weight: solid;
+  width: 20%;
+  height: 60px;
+  padding-top: 10px;
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 60px;
+  padding: 0;
+  width: 20%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+#navbar {
+  width: 49%;
+}
+
+#navbar li a {
+  font-size: 15px;
+  font-family: "Poppins";
+  font-weight: normal;
+  display: block;
+  color: #000;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+#navbar li a:hover {
+  color: white;
+  background-color: silver;
+}
+
+.main-section {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 100%;
+}
+
+#main-doc {
+  margin: 10px 12% 10px 10%;
+  max-width: 100%;
+}
+
+#dark-mode {
+  background-color: #212529;
+  border: solid;
+  border-color: white;
+  border-radius: 50px;
+  color: white;
+  height: 50px;
+  left: 93%;
+  position: fixed;
+  top: 0;
+  width: 50px;
+  margin: 10px;
+}
+
+.main-section header {
+  font-size: 45px;
+  font-family: "Poppins";
+  margin-top: 50px;
+}
+
+.main-section article p {
+  font-size: 22px;
+  font-family: Arial;
+  font-weight: normal;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.main-section article ul li {
+  font-size: 22px;
+  font-family: Arial;
+  font-weight: normal;
+  margin: 20px;
+}
+
+.main-section article ul {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 0;
+}
+
+.main-section article ol li {
+  font-size: 22px;
+  font-family: Arial;
+  font-weight: normal;
+  margin: 0px 20px 10px 20px;
+}
+
+.main-section article ol {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 0;
+}
+
+#info-box {
+  border: thin solid;
+  border-radius: 8px;
+  margin-top: 60px;
+  margin-bottom: 0;
+  padding: 10px;
+  border-color: silver;
+  width: 100%;
+}
+
+#info-box header {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+#info-box header i {
+  color: #5390d9;
+  margin: 5px;
+}
+
+#info-box .fa-exclamation-triangle {
+  color: #f9c74f;
+}
+
+#info-box article p {
+  font-size: 19px;
+  font-family: Arial;
+  font-weight: normal;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#header-two {
+  font-size: 30px;
+  margin-top: 40px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+.code-box {
+  border: thin solid;
+  border-radius: 5px;
+  padding: 10px 30px;
+  margin: 40px 0px 40px 0px;
+  background-color: #353535;
+  color: silver;
+  width: 100%;
+}
+
+#info-box .code-box {
+  padding: 0;
+}
+
+.code-box .codebox-word {
+  color: white;
+}
+
+.code-box p span {
+  color: #00a8e8;
+}
+
+.code-box .script {
+  padding: 0;
+  margin: 0;
+}
+
+.code-box .script-tag {
+  color: #c9184a;
+}
+
+.code-box .script-alert {
+  margin-left: 3%;
+}
+
+.code-box .output {
+  color: #ffbf69;
+}
+
+.split-code p {
+  display: inline;
+}
+
+.dhb-doc {
+  margin: 0;
+  padding: 0;
+}
+
+.dhb {
+  margin: 0;
+  padding: 0;
+}
+
+.code-box .dhb-doc span {
+  color: #8a817c;
+}
+
+.dhb span {
+  color: #3a86ff;
+}
+
+.break {
+  padding: 25px;
+}
+
+.code-box .green {
+  color: #99d98c;
+}
+
+
+@media only screen and (max-width: 814px) {
+  
+  body {
+    margin: 10px;
+  }
+  
+  #navbar header {
+    width: 100%;
+    text-align: center;
+  }
+  
+  #navbar ul {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+  }
+  
+  #main-doc {
+    margin: 10px 6%;
+    padding: 10px;
+  }
+  
+  .main-section {
+    margin-top: 25%;
+    margin-left: 0;
+    margin-right: 3%;
+    padding: 10px;
+    height: 100%;
+    align-item: center;
+}
+  .info-box {
+    width: 100%;
+  }
+  
+  .code-box {
+    width: 100%
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  
+  body {
+    margin: 10px;
+  }
+  
+  #navbar header {
+    width: 100%;
+    text-align: center;
+  }
+  
+  #navbar ul {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+  }
+  
+  #main-doc {
+    margin: 10px 6%;
+    padding: 10px;
+  }
+  
+  .main-section {
+    margin-top: 25%;
+    margin-left: 0;
+    margin-right: 3%;
+    padding: 10px;
+    height: 100%;
+    align-item: center;
+}
+  .info-box {
+    width: 100%;
+  }
+  
+  .code-box {
+    width: 100%
+  }
+}
