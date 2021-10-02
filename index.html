@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+
+<nav id="navbar">
+  <header>The JavaScript language</header>
+  
+  <ul>
+    <li><a class="nav-link" href="#introduction_to_JavaScript">Introduction to JavaScript</a></li>
+    <li><a class="nav-link" href="#Manuals_and_specifications">Manuals and specifications</a></li>
+    <li><a class="nav-link" href="#Code_editors">Code editors</a></li>
+    <li><a class="nav-link" href="#Developer_console">Developer console</a></li>
+    <li><a class="nav-link" href="#Hello,_world!">Hello, world!</a></li>
+    <li><a class="nav-link" href="#Code_structure">Code structure</a></li>
+    <li><a class="nav-link" href="#The_modern_mode,_'use_strict'">The modern mode, 'use strict'</a></li>
+    <li><a class="nav-link" href="#Variables">Variables</a></li>
+    <li><a class="nav-link" href="#Data_types">Data types</a></li>
+    <li><a class="nav-link" href="#Interaction:_alert,_prompt,_confirm">Interaction: alert, prompt, confirm</a></li>
+    <li><a class="nav-link" href="#Type_Conversions">Type Conversions</a></li>
+    <li><a class="nav-link" href="#Basic_operators,_maths">Basic operators, maths</a></li>
+  </ul>
+  
+</nav>
+<button id="dark-mode" onclick="myFunction()">Dark Mode</button>
+<main id="main-doc">
+  <section class="main-section" id="introduction_to_JavaScript">
+    <header>Introduction to JavaScript</header>
+    <article>
+      <p><i>JavaScript</i> was initially created to “make web pages alive”.</p>
+      <p>The programs in this language are called <i>scripts</i>. They can be written right in a web page’s HTML and run automatically as the page loads.</p>
+      <p>Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run.</p>
+      <p>In this aspect, JavaScript is very different from another language called <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">Java</a>.</p>
+      <div id="info-box">
+        <header><i class="fa fa-info-circle"></i> Why is it called JavaScript?</header>
+        <article>
+          <p>When JavaScript was created, it initially had another name: “LiveScript”. But Java was very popular at that time, so it was decided that positioning a new language as a “younger brother” of Java would help.</p>
+          <p>But as it evolved, JavaScript became a fully independent language with its own specification called <a href="https://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a>, and now it has no relation to Java at all.</p>
+        </article>
+      </div>
+    </article>
+  </section>
+  
+  
+  <section class="main-section" id="Manuals_and_specifications">
+    <header>Manuals and specifications</header>
+    <article>
+      <p>This book is a <i>tutorial</i>. It aims to help you gradually learn the language. But once you’re familiar with the basics, you’ll need other sources.</p>
+      
+      <header id="header-two">Specification</header>
+      <p><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/" target="_blank">The ECMA-262 specification</a> contains the most in-depth, detailed and formalized information about JavaScript. It defines the language.</p>
+      <p>But being that formalized, it’s difficult to understand at first. So if you need the most trustworthy source of information about the language details, the specification is the right place. But it’s not for everyday use.</p>
+      <p>A new specification version is released every year. In-between these releases, the latest specification draft is at <a href="https://tc39.es/ecma262/" target="_blank">https://tc39.es/ecma262/</a>.</p>
+      <p>To read about new bleeding-edge features, including those that are “almost standard” (so-called “stage 3”), see proposals at <a href="https://github.com/tc39/proposals" target="_blank">https://github.com/tc39/proposals</a>.</p>
+      <p>Also, if you’re developing for the browser, then there are other specifications covered in the <a href="https://javascript.info/browser-environment">second part</a> of the tutorial.</p>
+      
+      <header id="header-two">Manuals</header>
+      <p><strong>MDN (Mozilla) JavaScript Reference</strong> is the main manual with examples and other information. It’s great to get in-depth information about individual language functions, methods etc.</p>
+      <p>One can find it at <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">https://developer.mozilla.org/en US/docs/Web/JavaScript/Reference</a>.</p>
+      
+    </article>
+  </section>
+  
+  
+  <section class="main-section" id="Code_editors">
+    <header>Code Editors</header>
+    <article>
+      <p>A code editor is the place where programmers spend most of their time.</p>
+      <p>There are two main types of code editors: IDEs and lightweight editors. Many people use one tool of each type.</p>
+      
+      <header id="header-two">IDE</header>
+      <p>The term IDE (Integrated Development Environment) refers to a powerful editor with many features that usually operates on a “whole project.” As the name suggests, it’s not just an editor, but a full-scale “development environment.”</p>
+      <p>An IDE loads the project (which can be many files), allows navigation between files, provides autocompletion based on the whole project (not just the open file), and integrates with a version management system (like <a href="https://git-scm.com/" target="_blank">git</a>), a testing environment, and other “project-level” stuff.</p>
+      <p>If you haven’t selected an IDE yet, consider the following options:</p>
+      <p>
+        <ul>
+          <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> (cross-platform, free).</li>
+          <li><a href="https://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a> (cross-platform, paid).</li>
+        </ul>
+      </p>
+    <p>For Windows, there’s also “Visual Studio”, not to be confused with “Visual Studio Code”. “Visual Studio” is a paid and mighty Windows-only editor, well-suited for the .NET platform. It’s also good at JavaScript. There’s also a free version <a href="https://visualstudio.microsoft.com/vs/community/" target="_blank">Visual Studio Community</a>.</p>
+    <p>Many IDEs are paid, but have a trial period. Their cost is usually negligible compared to a qualified developer’s salary, so just choose the best one for you.</p>
+    
+    <header id="header-two">Lightweight Editors</header>
+    <p>“Lightweight editors” are not as powerful as IDEs, but they’re fast, elegant and simple.</p>
+    <p>They are mainly used to open and edit a file instantly.</p>
+    <p>The main difference between a “lightweight editor” and an “IDE” is that an IDE works on a project-level, so it loads much more data on start, analyzes the project structure if needed and so on. A lightweight editor is much faster if we need only one file.</p>
+    <p>In practice, lightweight editors may have a lot of plugins including directory-level syntax analyzers and autocompleters, so there’s no strict border between a lightweight editor and an IDE.</p>
+      
+    </article>
+  </section>
+
+  
+  <section class="main-section" id="Developer_console">
+    <header>Developer console</header>
+    <article>
+      <p>Code is prone to errors. You will quite likely make errors… Oh, what am I talking about? You are absolutely going to make errors, at least if you’re a human, not a <a href="https://en.wikipedia.org/wiki/Bender_(Futurama)" target="_blank">robot</a>.</p>
+      <p>But in the browser, users don’t see errors by default. So, if something goes wrong in the script, we won’t see what’s broken and can’t fix it.</p>
+      <p>To see errors and get a lot of other useful information about scripts, “developer tools” have been embedded in browsers.</p>
+      <p>Most developers lean towards Chrome or Firefox for development because those browsers have the best developer tools. Other browsers also provide developer tools, sometimes with special features, but are usually playing “catch-up” to Chrome or Firefox. So most developers have a “favorite” browser and switch to others if a problem is browser-specific.</p>
+      <p>Developer tools are potent; they have many features. To start, we’ll learn how to open them, look at errors, and run JavaScript commands.</p>
+      
+      <header id="header-two">Google Chrome</header>
+      <p>Open the page <a href="https://javascript.info/article/devtools/bug.html" target="_blank">bug.html</a>.</p>
+      <p>There’s an error in the JavaScript code on it. It’s hidden from a regular visitor’s eyes, so let’s open developer tools to see it.</p>
+      <p>Press <kbd>Ctrl+Shift+I</kbd> or, if you’re on Mac, then <kbd>Cmd+Opt+J</kbd>.</p>
+      <p>The developer tools will open on the Console tab by default.</p>
+      <p>It looks somewhat like this:</p>
+      <img src="https://javascript.info/article/devtools/chrome@2x.png" alt="console">
+      <p>The exact look of developer tools depends on your version of Chrome. It changes from time to time but should be similar.</p>
+      <p>
+        <ul>
+          <li>Here we can see the red-colored error message. In this case, the script contains an unknown “lalala” command.</li>
+          <li>On the right, there is a clickable link to the source <mark>bug.html:12</mark> with the line number where the error has occurred.</li>
+        </ul>
+      </p>
+    <p>Below the error message, there is a blue <mark>></mark> symbol. It marks a “command line” where we can type JavaScript commands. Press <kbd>Enter</kbd> to run them.</p>
+    <p>Now we can see errors, and that’s enough for a start. We’ll come back to developer tools later and cover debugging more in-depth in the chapter <a href="https://javascript.info/debugging-chrome" target="_blank">Debugging in the browser</a>.</p>
+    
+    <div id="info-box">
+        <header><i class="fa fa-info-circle"></i> Multi-line input</header>
+        <article>
+          <p>Usually, when we put a line of code into the console, and then press <kbd>Enter</kbd>, it executes.</p>
+          <p>To insert multiple lines, press <kbd>Shift+Enter</kbd>. This way one can enter long fragments of JavaScript code.</p>
+        </article>
+      </div>
+    </article>
+  </section>
+
+
+<section class="main-section" id="Hello,_world!">
+    <header>Hello, World!</header>
+    <article>
+      <p>This part of the tutorial is about core JavaScript, the language itself.</p>
+      <p>But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We’ll keep the amount of browser-specific commands (like alert) to a minimum so that you don’t spend time on them if you plan to concentrate on another environment (like Node.js). We’ll focus on JavaScript in the browser in the <a href="https://javascript.info/ui" target="_blank">next part</a> of the tutorial.</p>
+      <p>So first, let’s see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like <kbd>"node my.js"</kbd>.</p>
+      
+      <header id="header-two">The “script” tag</header>
+      <p>JavaScript programs can be inserted almost anywhere into an HTML document using the <mark>&lt;script&gt;</mark> tag.</p>
+      <p>For instance:</p>
+      
+      
+        <div class="code-box">
+        <code>
+        <p class="dhb-doc">&lt;<span>!DOCTYPE HTML</span>&gt;</p>
+        <p class="dhb">&lt;<span>html</span>&gt;</p>
+
+        <p class="dhb">&lt;<span>body</span>&gt;</p>
+
+        <p class="script-p">&lt;<span>p</span>&gt;<span class="codebox-word">Before the script...</span>&lt;/<span>p</span>&gt;</p>
+
+        <p class="script">&lt;<span class="script-tag">script</span>&gt;</p>
+            <p class="script-alert">alert( <span class="output">'Hello, world!'</span> );</p>
+        <p class="script">&lt;/<span class="script-tag">script</span>&gt;</p>
+
+         <p class="script-p"> &lt;<span>p</span>&gt;<span class="codebox-word">...After the script.</span>&lt;/<span>p</span>&gt; </p>
+
+         <p class="dhb">&lt;/<span>body</span>&gt;</p>
+
+         <p class="dhb">&lt;/<span>html</span>&gt;</p>
+        </code>
+        </div>
+      <p>The &lt;script&gt; tag contains JavaScript code which is automatically executed when the browser processes the tag.</p> 
+    </article>
+  </section>
+
+
+<section class="main-section" id="Code_structure">
+  <header>Code Structure</header>
+  <article>
+  <p>The first thing we’ll study is the building blocks of code.</p>
+  
+  <header id="header-two">Statements</header>
+  <p>Statements are syntax constructs and commands that perform actions.</p>
+  <p>We’ve already seen a statement, <mark>alert('Hello, world!')</mark>, which shows the message “Hello, world!”.</p>
+  <p>We can have as many statements in our code as we want. Statements can be separated with a semicolon.</p>
+  <p>For example, here we split “Hello World” into two alerts:</p>
+  
+       <div class="code-box">
+        <code class="split-code">
+          <p class="script-alert">alert( <span class="output">'Hello'</span> );</p>
+          <p class="script-alert">alert( <span class="output">'World!'</span> );</p>
+        </code>
+        </div>
+    
+    <p>Usually, statements are written on separate lines to make the code more readable:</p>
+    
+       <div class="code-box">
+        <code>
+          <p class="script-alert">alert( <span class="output">'Hello'</span> );</p>
+          <p class="script-alert">alert( <span class="output">'World!'</span> );</p>
+        </code>
+        </div>
+    
+    <header id="header-two">Semicolons</header>
+    <p>A semicolon may be omitted in most cases when a line break exists.</p>
+    <p>This would also work:</p>
+    
+       <div class="code-box">
+        <code>
+          <p class="script-alert">alert ( <span class="output">'Hello'</span> )</p>
+          <p class="script-alert">alert ( <span class="output">'World!'</span> )</p>
+        </code>
+        </div>
+    
+    <p>Here, JavaScript interprets the line break as an “implicit” semicolon. This is called an <a href="https://tc39.es/ecma262/#sec-automatic-semicolon-insertion" target="_blank">automatic semicolon insertion</a>.</p>
+    <p><strong>In most cases, a newline implies a semicolon. But “in most cases” does not mean “always”!</strong></p>
+    <p>There are cases when a newline does not mean a semicolon. For example:</p>
+    
+       <div class="code-box">
+        <code>
+          <p class="script-alert">alert ( <span class="output">3 +</span></p>
+          <p class="script-alert"><span class="output">1</span></p>
+          <p class="script-alert"><span class="output">+ 2</span> );</p>
+        </code>
+        </div>
+    
+    <p>The code outputs <mark>6</mark> because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus <mark>"+"</mark>, then it is an “incomplete expression”, so a semicolon there would be incorrect. And in this case, that works as intended.</p>
+    <p><strong>But there are situations where JavaScript “fails” to assume a semicolon where it is really needed.</strong></p>
+    <p>Errors which occur in such cases are quite hard to find and fix.</p>
+    
+    <div id="info-box">
+        <header><i class="fa fa-info-circle"></i> An example of an error</header>
+        <article>
+          <p>If you’re curious to see a concrete example of such an error, check this code out:</p>
+          
+        <div class="code-box">
+        <code>
+          <p class="script-alert">alert ( <span class="output">'Hello'</span>);</p>
+          <p class="script-alert"><span class="output"> </span></p>
+          <p class="script-alert">[<span class="output">1</span>,<span class="output">2</span>].<span>forEach</span>( <span class="output">alert</span> );</p>
+        </code>
+        </div>
+          
+          <p>The difference compared to the code above is only one character: the semicolon at the end of the first line is gone.</p>
+          <p>If we run this code, only the first <mark>Hello</mark> shows (and there’s an error, you may need to open the console to see it). There are no numbers any more.</p>
+          <p>That’s because JavaScript does not assume a semicolon before square brackets [...]. So, the code in the last example is treated as a single statement.</p>
+          <p>Here’s how the engine sees it:</p>
+          
+          <div class="code-box">
+        <code>
+          <p class="script-alert">alert ( <span class="output">'Hello'</span>)[<span class="output">1</span>,<span class="output">2</span>].<span>forEach</span>( <span class="output">alert</span> );</p>
+        </code>
+        </div>
+          
+          <p>Looks weird, right? Such merging in this case is just wrong. We need to put a semicolon after <mark>alert</mark> for the code to work correctly.</p> 
+        </article>
+      </div>
+    
+  </article>
+</section>
+
+
+<section class="main-section" id="The_modern_mode,_'use_strict'">
+  <header>The modern mode, 'use strict'</header>
+  <article>
+  <p>For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn’t change.</p>
+    <p>That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript’s creators got stuck in the language forever.</p>
+    <p>This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones. To keep the old code working, most such modifications are off by default. You need to explicitly enable them with a special directive: <mark>"use strict"</mark>.</p>
+    
+    <header id="header-two">“use strict”</header>
+    <p>The directive looks like a string: <mark>"use strict"</mark> or <mark>'use strict'</mark>. When it is located at the top of a script, the whole script works the “modern” way.</p>
+    <p>For example:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert"><span class="green">"use strict"</span>;</p>
+          <p class="script-alert">// The code goes here </p>
+          <p class="script-alert">...</p>
+        </code>
+        </div>
+    
+    <p>Quite soon we’re going to learn functions (a way to group commands), so let’s note in advance that <mark>"use strict"</mark> can be put at the beginning of a function. Doing that enables strict mode in that function only. But usually people use it for the whole script.</p>
+    
+    <div id="info-box">
+        <header><i class="fa fa-exclamation-triangle"></i> Ensure that “use strict” is at the top</header>
+        <article>
+          <p>Please make sure that <mark>"use strict"</mark> is at the top of your scripts, otherwise strict mode may not be enabled.</p>
+          <p>Strict mode isn’t enabled here:</p>
+          
+        <div class="code-box">
+        <code>
+          <p class="script-alert">alert ( <span class="green">"some code"</span>);</p>
+          <p class="script-alert">// "use strict" below is ignored--it must be at the top</p>
+          <p class="script-alert"><span class="green">"use strict"</span>;</p>
+          <p class="script-alert">// strict mode is not activated</p>
+        </code>
+        </div>
+          
+          <p>Only comments may appear above <mark>"use strict"</mark>.</p>
+          
+          </article>
+      </div>
+    
+    
+   <div id="info-box">
+        <header><i class="fa fa-exclamation-triangle"></i> There’s no way to cancel <mark>use strict</mark></header>
+        <article>
+          <p>There is no directive like <mark>"no use strict"</mark> that reverts the engine to old behavior.</p>
+          <p>Once we enter strict mode, there’s no going back.</p>
+          
+          </article>
+      </div>
+    
+    <header id="header-two">Browser console</header>
+    <p>When you use a developer console to run code, please note that it doesn’t <mark>use strict</mark> by default.</p>
+    <p>Sometimes, when <mark>use strict</mark> makes a difference, you’ll get incorrect results.</p>
+    <p>So, how to actually <mark>use strict</mark> in the console?</p>
+    <p>First, you can try to press <kbd>Shift+Enter</kbd> to input multiple lines, and put <mark>use strict</mark> on top, like this:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert"><span class="green">'use strict'</span>;&nbsp;&nbsp;&lt;<span>Shift</span><span class="output">+</span><span>Enter</span> for <span> a newline</span>&gt;</p>
+          <p class="script-alert">// ...your code</p>
+          <p class="script-alert"><span class="green">"use strict"</span>;</p>
+          <p class="script-alert">&lt;<span>Enter to run</span>&gt;</p>
+        </code>
+        </div>
+    
+    <p>It works in most browsers, namely Firefox and Chrome.</p>
+    <p>If it doesn’t, e.g. in an old browser, there’s an ugly, but reliable way to ensure <mark>use strict</mark>. Put it inside this kind of wrapper:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert">(<span>function</span>()&nbsp; &#123;</p>
+          <p class="script-alert"><span class="green">'use strict'</span>;</p>
+          <p class="script-alert"></p>
+          <p class="script-alert">// ...your code here...</p>
+          <p class="script-alert">&#125;)()</p>
+        </code>
+        </div>
+        
+    
+  </article>
+</section>
+
+
+<section class="main-section" id="Variables">
+  <header>Variables</header>
+  <article>
+  <p>Most of the time, a JavaScript application needs to work with information. Here are two examples:</p>
+  
+    <ol>
+      <li>An online shop – the information might include goods being sold and a shopping cart.</li>
+      <li>A chat application – the information might include users, messages, and much more.</li>
+    </ol>
+    
+   <p>Variables are used to store this information.</p>
+    
+    <header id="header-two">A variable</header>
+    <p>A <a href="https://en.wikipedia.org/wiki/Variable_(computer_science)" target="_blank">variable</a> is a “named storage” for data. We can use variables to store goodies, visitors, and other data.</p>
+    <p>To create a variable in JavaScript, use the <mark>let</mark> keyword.</p>
+    <p>The statement below creates (in other words:<i> declares</i>) a variable with the name “message”:</p>
+    
+       <div class="code-box">
+        <code>
+          <p class="script-alert"><span>let</span>&nbsp; message;</p>
+        </code>
+        </div>
+    
+    <p>Now, we can put some data into it by using the assignment operator <mark>=</mark>:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert"><span>let</span>&nbsp; message;</p>
+          <p class="script-alert">message = <span class="green">'Hello'</span>;&nbsp; // store the string 'Hello' in the variable named message</p>
+        </code>
+        </div>
+    
+    <p>The string is now saved into the memory area associated with the variable. We can access it using the variable name:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert"><span>let</span>&nbsp; message;</p>
+          <p class="script-alert">message = <span class="green">'Hello'</span>;</p>
+          <p class="script-alert">&nbsp;</p>
+          <p class="script-alert">alert(message);&nbsp; // shows the variable content</p>
+        </code>
+        </div>
+    
+    <header id="header-two">Variable naming</header>
+    <p>There are two limitations on variable names in JavaScript:</p>
+    <p>
+      <ol>
+        <li>The name must contain only letters, digits, or the symbols <mark>$</mark> and <mark>_</mark> .</li>
+        <li>The first character must not be a digit.</li>
+      </ol>
+    </p>
+    <p>Examples of valid names:</p>
+    
+  <div class="code-box">
+        <code>
+          <p class="script-alert"><span>let</span>&nbsp; userName;</p>
+          <p class="script-alert"><span>let</span>&nbsp; test123;</p>
+        </code>
+        </div>
+  
+  <p>When the name contains multiple words, <a href="https://en.wikipedia.org/wiki/Camel_case" target="_blank">camelCase</a> is commonly used. That is: words go one after another, each word except first starting with a capital letter: <mark>myVeryLongName</mark>.</p>
+  <p>What’s interesting – the dollar sign <mark>'$'</mark> and the underscore <mark>'_'</mark> can also be used in names. They are regular symbols, just like letters, without any special meaning.</p>
+  
+  </article>
+</section>
+
+
+
+<section class="main-section" id="Data_types">
+  <header>Data types</header>
+  <article>
+    <p>A value in JavaScript is always of a certain type. For example, a string or a number.</p>
+    <p>There are eight basic data types in JavaScript. Here, we’ll cover them in general and in the next chapters we’ll talk about each of them in detail.</p>
+    <p>We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert">// no error</p>
+          <p class="script-alert"><span>let</span>&nbsp; message = "<span class="green">Hello</span>";</p>
+          <p class="script-alert">message = <span class="script-tag">123456</span>;</p>
+        </code>
+        </div>
+    
+    <p>Programming languages that allow such things, such as JavaScript, are called “dynamically typed”, meaning that there exist data types, but variables are not bound to any of them.</p>
+    
+    <header id="header-two">Number</header>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert"><span>let</span>&nbsp; n = <span class="green">123</span>;</p>
+          <p class="script-alert">n = <span class="script-tag">12.345</span>;</p>
+        </code>
+        </div>
+    
+    <p>The <i>number</i> type represents both integer and floating point numbers.</p>
+    <p>There are many operations for numbers, e.g. multiplication <mark>*</mark>, division <mark>/</mark>, addition <mark>+</mark>, subtraction <mark>-</mark>, and so on.</p>
+    <p>Besides regular numbers, there are so-called “special numeric values” which also belong to this data type: <mark>Infinity</mark>, <mark>-Infinity</mark> and <mark>NaN</mark>.</p>
+    
+    <div id="info-box">
+        <header><i class="fa fa-info-circle"></i> Mathematical operations are safe</header>
+        <article>
+          <p>Doing maths is “safe” in JavaScript. We can do anything: divide by zero, treat non-numeric strings as numbers, etc.</p>
+          <p>The script will never stop with a fatal error (“die”). At worst, we’ll get <mark>NaN</mark> as the result.</p>
+        </article>
+      </div>
+ 
+  </article>
+</section>
+
+
+
+<section class="main-section" id="Interaction:_alert,_prompt,_confirm">
+  <header>Interaction: alert, prompt, confirm</header>
+  <article>
+    <p>As we’ll be using the browser as our demo environment, let’s see a couple of functions to interact with the user: <mark>alert</mark>,<mark>prompt</mark> and <mark>confirm</mark>.</p>
+    
+    <header class="header-two">alert</header>
+    <p>This one we’ve seen already. It shows a message and waits for the user to press “OK”.</p>
+    <p>For example:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert">alert("<span class="green">Hello</span>");</p>
+        </code>
+        </div>
+    
+    <p>The mini-window with the message is called a modal window. The word “modal” means that the visitor can’t interact with the rest of the page, press other buttons, etc, until they have dealt with the window. In this case – until they press “OK”.</p>
+    
+    <header class="header-two">prompt</header>
+    <p>The function prompt accepts two arguments:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert">result = prompt(title, [<span>default</span>]);</p>
+        </code>
+        </div>
+    
+    <p>It shows a modal window with a text message, an input field for the visitor, and the buttons OK/Cancel.</p>
+    <p><mark>title</mark></p>
+    <p>The text to show the visitor.</p>
+    <p><mark>default</mark></p>
+    <p>An optional second parameter, the initial value for the input field.</p>
+    <p>The visitor can type something in the prompt input field and press OK. Then we get that text in the <mark>result</mark>. Or they can cancel the input by pressing Cancel or hitting the <kbd>Esc</kbd> key, then we get <mark>null</mark> as the <mark>result</mark>.</p>
+    <p>The call to prompt returns the text from the input field or null if the input was canceled.</p>
+    <p>For instance:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert"><span>let</span> age = prompt('<span class="green">How old are you?</span>', <span class="script-tag">100</span>);</p>
+          <p class="script-alert">alert(`<span class="green">You are</span> ${age} <span class="green">years old!</span>`); // You are 100 years old!</p>
+        </code>
+        </div>
+    
+    <header class="header-two">confirm</header>
+    <p>The syntax:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert">result = confirm(question);</p>
+        </code>
+        </div>
+    
+    <p>The function <mark>confirm</mark> shows a modal window with a <mark>question</mark> and two buttons: OK and Cancel.</p>
+    <p>The result is <mark>true</mark> if OK is pressed and <mark>false</mark> otherwise.</p>
+    <p>For example:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert"><span>let</span> isBoss = confirm("<span class="green">Are you the boss?</span>");</p>
+          <p class="script-alert">alert( isBoss ); // true if OK is pressed</p>
+        </code>
+        </div>
+ 
+  </article>
+</section>
+
+
+
+<section class="main-section" id="Type_Conversions">
+  <header>Type Conversions</header>
+  <article>
+    <p>Most of the time, operators and functions automatically convert the values given to them to the right type.</p>
+    <p>For example, <mark>alert</mark> automatically converts any value to a string to show it. Mathematical operations convert values to numbers.</p>
+    <p>There are also cases when we need to explicitly convert a value to the expected type.</p>
+    
+    <div id="info-box">
+        <header><i class="fa fa-info-circle"></i> Not talking about objects yet</header>
+        <article>
+          <p>In this chapter, we won’t cover objects. For now we’ll just be talking about primitives.</p>
+          <p>Later, after we learn about objects, in the chapter <a href="https://javascript.info/object-toprimitive" target="_blank">Object to primitive conversion</a> we’ll see how objects fit in.</p>
+        </article>
+      </div>
+    
+    <header class="header-two">String Conversion</header>
+    <p>String conversion happens when we need the string form of a value.</p>
+    <p>For example, <mark>alert(value)</mark> does it to show the value.</p>
+    <p>We can also call the <mark>String(value)</mark> function to convert a value to a string:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert"><span>let</span> value = <span class="script-tag">true</span>;</p>
+          <p class="script-alert">alert(<span>typeof</span> value); // boolean</p>
+          <p class="script-alert">&nbsp;</p>
+          <p class="script-alert">value = String(value); // now value is a string "true"</p>
+          <p class="script-alert">alert(<span>typeof</span> value); // string</p>
+        </code>
+        </div>
+    
+    <p>String conversion is mostly obvious. A <mark>false</mark> becomes <mark>"false"</mark>, <mark>null</mark> becomes <mark>"null"</mark>, etc.</p>
+    
+    <header class="header-two">Numeric Conversion</header>
+    <p>Numeric conversion happens in mathematical functions and expressions automatically.</p>
+    <p>For example, when division <mark>/</mark> is applied to non-numbers:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert">alert( "<span class="green">6</span>" / "<span class="green">2</span>" ); // 3, strings are converted to numbers</p>
+        </code>
+        </div>
+    
+    <p>We can use the <mark>Number(value)</mark> function to explicitly convert a <mark>value</mark> to a number:</p>
+    
+    <div class="code-box">
+        <code>
+          <p class="script-alert"><span>let</span> str = "<span class="green">123</span>";</p>
+          <p class="script-alert">alert(<span>typeof</span> str); // string</p>
+          <p class="script-alert">&nbsp;</p>
+          <p class="script-alert"><span>let</span> num = Number(str); // becomes a number 123</p>
+          <p class="script-alert">alert(<span>typeof</span> num); // number</p>
+        </code>
+        </div>
+    
+    <p>Explicit conversion is usually required when we read a value from a string-based source like a text form but expect a number to be entered.</p>
+ 
+  </article>
+</section>
+
+
+
+<section class="main-section" id="Basic_operators,_maths">
+  <header>Basic operators, maths</header>
+  <article>
+    <p>We know many operators from school. They are things like addition <mark>+</mark>, multiplication <mark>*</mark>, subtraction <mark>-</mark>, and so on.</p>
+    <p>In this chapter, we’ll start with simple operators, then concentrate on JavaScript-specific aspects, not covered by school arithmetic.</p>
+    
+    <header class="header-two">Terms: “unary”, “binary”, “operand”</header>
+    <p>Before we move on, let’s grasp some common terminology.</p>
+    <p>
+      <ul>
+        <li><i>An operand</i> – is what operators are applied to. For instance, in the multiplication of <mark>5 * 2</mark> there are two operands: the left operand is <mark>5</mark> and the right operand is <mark>2</mark>. Sometimes, people call these “arguments” instead of “operands”.</li>
+        <li>An operator is unary if it has a single operand. For example, the unary negation - reverses the sign of a number:
+        
+        <div class="code-box">
+        <code>
+          <p class="script-alert"><span>let</span> x = <span class="script-tag">1</span>;</p>
+          <p class="script-alert">&nbsp;</p>
+          <p class="script-alert">x = -x;</p>
+          <p class="script-alert">alert( x ); // -1, unary negation was applied</p>
+        </code>
+        </div>
+          
+        </li>
+        <li>An operator is binary if it has two operands. The same minus exists in binary form as well:
+        
+        <div class="code-box">
+        <code>
+          <p class="script-alert"><span>let</span> x = <span class="script-tag">1</span>, y = <span class="script-tag">3</span>;</p>
+          <p class="script-alert">alert( y - x ); // 2, binary minus subtracts values</p>
+        </code>
+        </div>
+          
+          Formally, in the examples above we have two different operators that share the same symbol: the negation operator, a unary operator that reverses the sign, and the subtraction operator, a binary operator that subtracts one number from another.</li>
+      </ul>
+    </p>
+  
+  <header class="header-two">Reference</header>
+  <p>All the documentation in this page is taken from <a href="https://javascript.info/" target="_blank">javascript.info</a>.</p>
+ 
+  </article>
+</section>
+
+</main>
+    
+</body>
+</html>
